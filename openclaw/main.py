@@ -1,12 +1,12 @@
-from claws.sql_claw import handle_query
+from claws.sql_claw import handle_user_input
 
-print("🦾 OpenClaw SQLite Agent")
-print("Type SQL directly (for now). Type exit to quit.\n")
+print("🦾 OpenClaw SQLite Agent (NL → SQL)")
+print("Ask questions in English. Type exit to quit.\n")
 
 while True:
-    user_input = input("SQL> ")
+    user_input = input("You> ")
     if user_input.lower() == "exit":
         break
 
-    output = handle_query(user_input)
-    print("Result:", output)
+    result = handle_user_input(user_input)
+    print("Result:", result)
